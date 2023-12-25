@@ -93,6 +93,17 @@ var finances = [
 // 1. Calculate total number of months
 var totalMonths = finances.length;
 
+// 2. Calculate the net total of Profit/Losses:
+var totalProfitLosses = 0
+var record
+for (record of finances) {
+    if (typeof record[1] !== "number") {
+        handleError(`Here it is no profit/loss value at index ${finances.indexOf(record)}.`);
+    }
+    totalProfitLosses += record[1]
+}
+
 
 // 5.Here are print the results:
 console.log("Total months:", totalMonths);
+console.log("Total:", "$" + totalProfitLosses);

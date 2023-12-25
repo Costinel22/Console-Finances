@@ -6,6 +6,12 @@ create a variabile and add lenght to it
 
 for point 2 
 The net total amount of Profit/Losses over the entire period.
+- create tow variabile
+   var totalProfitLosses = 0
+   var record 
+create a for instance to check if the finance are number and calculate the sum of the profit/losts over the whole period
+   totalProfitLosses += record[number from finance array ]
+     using += to calculate the total amount of array
 
 for point 3
 The average of the changes in Profit/Losses over the entire period.
@@ -15,3 +21,4 @@ The greatest increase in Profit/Losses (date and difference in the amounts) over
 
 for point 5 print result using 
 console.log(totalMounths)
+console.log(, "$" + totalProfitLosses)
