@@ -26,7 +26,14 @@ The average of the changes in Profit/Losses over the entire period.
 
 fot point 4
 The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
+- create variable for each change biger and lower
+   var greatestIncrease
+   var greatestDecrease
+
+
 
 for point 5 print result using 
 console.log(totalMounths)
 console.log(, "$" + totalProfitLosses)
+console.log("Greatest increase in Profit/Loss );
+console.log("Greatest decrease in Profit/Loss);

@@ -120,9 +120,27 @@ for (record of finances) {
     countChange++
 }
 averageChange = totalChanges / (countChange - 1)
+    // 4. Show the biger and the lower change over all the records profit/losses
+let greatestIncrease = { date: "", amount: 0 };
+let greatestDecrease = { date: "", amount: 0 };
+
+for (let i = 1; i < finances.length; i++) {
+    changes = finances[i][1] - finances[i - 1][1];
+
+    if (changes > greatestIncrease.amount) {
+        greatestIncrease = { date: finances[i][0], amount: changes };
+    }
+
+    if (changes < greatestDecrease.amount) {
+        greatestDecrease = { date: finances[i][0], amount: changes };
+    }
+}
+
 
 
 // 5.Here are print the results:
 console.log("Total months:", totalMonths);
 console.log("Total:", "$" + totalProfitLosses);
-console.log("Average change in Profit/Loss:", averageChange.toFixed(2));
+console.log("Average change:", averageChange.toFixed(2));
+console.log("Greatest increase in Profit/Loss:", greatestIncrease.date, greatestIncrease.amount);
+console.log("Greatest decrease in Profit/Loss:", greatestDecrease.date, greatestDecrease.amount);
