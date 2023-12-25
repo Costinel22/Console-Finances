@@ -15,6 +15,14 @@ create a for instance to check if the finance are number and calculate the sum o
 
 for point 3
 The average of the changes in Profit/Losses over the entire period.
+- create four variabile
+  var changes 
+  var totalChanges = 0
+  var previousProfitLoss = 0
+  var countChange = 0
+  var curentPreviousLoss = 0
+  var averageChange = 0
+  add all on  for of loop
 
 fot point 4
 The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.

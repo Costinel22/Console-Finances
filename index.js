@@ -103,7 +103,26 @@ for (record of finances) {
     totalProfitLosses += record[1]
 }
 
+// 3. Here it calculate the average change in Profit/Losses:
+var changes
+var totalChanges = 0
+var previousProfitLoss = 0
+var countChange = 0
+var curentPreviousLoss = 0
+var averageChange = 0
+for (record of finances) {
+    curentPreviousLoss = record[1]
+    if (countChange > 0) {
+        changes = curentPreviousLoss - previousProfitLoss
+        totalChanges += changes
+    }
+    previousProfitLoss = curentPreviousLoss
+    countChange++
+}
+averageChange = totalChanges / (countChange - 1)
+
 
 // 5.Here are print the results:
 console.log("Total months:", totalMonths);
 console.log("Total:", "$" + totalProfitLosses);
+console.log("Average change in Profit/Loss:", averageChange.toFixed(2));
