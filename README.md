@@ -8,6 +8,8 @@
 
 ## Installation
 
+https://costinel22.github.io/Console-Finances/
+
 Open on Chrome, clik righr and chose inspect, go at console and refresh the page.
 ## Usage
 - Here it ca see a description of sudocode.
